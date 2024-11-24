@@ -1,0 +1,21 @@
+.wrapper {
+    background-color: #7070da;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1350px;
+      margin: 0 auto;
+
+        .logo {
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            max-width: 50%;
+            min-width: 30%;
+        }
+    }
+}

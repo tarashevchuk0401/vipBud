@@ -1,6 +1,11 @@
-import { NgModule, isDevMode } from "@angular/core";
-import { TRANSLOCO_CONFIG, TRANSLOCO_LOADER, TranslocoModule, translocoConfig } from "@ngneat/transloco";
-import { TranslocoHttpLoader } from "./transloco-loader";
+import { NgModule, isDevMode } from '@angular/core'
+import {
+    TRANSLOCO_CONFIG,
+    TRANSLOCO_LOADER,
+    TranslocoModule,
+    translocoConfig,
+} from '@ngneat/transloco'
+import { TranslocoHttpLoader } from './transloco-loader'
 
 @NgModule({
     exports: [TranslocoModule],
@@ -18,4 +23,4 @@ import { TranslocoHttpLoader } from "./transloco-loader";
         { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader },
     ],
 })
-export class TranslocoRootModule { }
+export class TranslocoRootModule {}
