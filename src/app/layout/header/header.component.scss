@@ -1,5 +1,45 @@
 @import "assets/colors.scss";
 
+:host {
+  ng-select ::ng-deep {
+    width: 80px;
+
+    .ng-arrow-wrapper .ng-arrow {
+      display: none;
+    }
+    .ng-value {
+      box-shadow: none;
+      border: none;
+      outline: none;
+    }
+
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+      background-color: $black_900;
+      color: $gold_500;
+    }
+
+    .ng-select-container {
+      border-radius: 0px;
+      border: none;
+      text-align: left;
+      z-index: 1;
+      color: $gold_500;
+      background-color: $black_900;
+    }
+    .ng-dropdown-panel::ng-deep {
+      overflow: hidden;
+      width: 100%;
+      min-width: 100%;
+      max-height: 235px;
+      font-size: 16px;
+      font-weight: 400;
+      z-index: 2;
+      border: none;
+    }
+  }
+}
+
 .wrapper {
   background-color: $black_900;
 
@@ -12,14 +52,33 @@
 
     .logo img {
       width: 150px;
+      margin-left: 50px;
+      @media (max-width: 768px) {
+        width: 120px;      }
     }
 
     .info {
       display: flex;
       justify-content: space-between;
-      max-width: 50%;
+      max-width: 70%;
       min-width: 30%;
       color: $gold_500;
+
+      *{
+        margin: 0 7px;
+      }
+
+      a{
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      img{
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
     }
   }
 }

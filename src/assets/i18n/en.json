@@ -1,4 +1,7 @@
 {
-  "Contact": "Contact"
-
+  "header": {
+    "aboutUs": "About us",
+    "contact": "Contact",
+    "gallery": "Projects"
+  }
 }

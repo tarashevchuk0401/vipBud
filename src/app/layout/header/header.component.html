@@ -4,9 +4,17 @@
       <img src="./assets/icons/logo.png" alt="">
     </div>
     <div class="info m-2 d-flex ">
-      <a routerLink="/">Home</a>
-      <a routerLink="/main" (click)="onLanguageChange('uk')">{{ 'Contact' | transloco }}</a>
-      <img  (click)="onButtonClick()" src="assets/icons/burger.svg" alt="menu">
+      <a routerLink="/">{{ 'header.aboutUs' | transloco }}</a>
+      <a routerLink="/gallery">{{ 'header.gallery' | transloco }}</a>
+      <a routerLink="/main" (click)="onLanguageChange('uk')">{{ 'header.contact' | transloco }}</a>
+
+      <ng-select [(ngModel)]="language" [clearable]="false" (change)="onLanguageChange($event)">
+        @for (lang of availableLanguage; track lang) {
+          <ng-option [value]="lang.value">{{lang.name}}</ng-option>
+        }
+      </ng-select>
+
+      <img (click)="openSidebar.emit()" src="assets/icons/burger.svg" alt="menu">
     </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
+@import "@ng-select/ng-select/themes/default.theme.css";
 
 
 * {
@@ -14,6 +15,7 @@
 a {
   all: unset;
 }
+
 
 //$black_900: #000000;
 //$black_500: #121111;
