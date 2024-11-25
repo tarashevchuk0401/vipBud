@@ -13,7 +13,7 @@ import { TranslocoHttpLoader } from './transloco-loader';
     {
       provide: TRANSLOCO_CONFIG,
       useValue: translocoConfig({
-        availableLangs: ['en', 'pl'],
+        availableLangs: ['en', 'pl', 'uk'],
         defaultLang: 'en',
         // Remove this option if your application doesn't support changing language in runtime.
         reRenderOnLangChange: true,

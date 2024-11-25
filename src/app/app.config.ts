@@ -7,7 +7,7 @@ import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideTransloco as provideTransloco_alias } from '@jsverse/transloco';
+import { provideTransloco } from '@ngneat/transloco';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,9 +16,9 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideAnimationsAsync(),
     provideHttpClient(),
-    provideTransloco_alias({
+    provideTransloco({
       config: {
-        availableLangs: ['en', 'pl', 'ua'],
+        availableLangs: ['en', 'pl', 'uk'],
         defaultLang: 'en',
         // Remove this option if your application doesn't support changing language in runtime.
         reRenderOnLangChange: true,

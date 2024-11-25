@@ -16,7 +16,6 @@
       "parser": "@typescript-eslint/parser",
       "plugins": ["@angular-eslint"],
       "rules": {
-        // Add custom rules here if necessary
       }
     },
     {

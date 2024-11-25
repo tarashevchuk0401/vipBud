@@ -7,6 +7,7 @@ import {
   NgbOffcanvas,
   OffcanvasDismissReasons,
 } from '@ng-bootstrap/ng-bootstrap';
+import { TranslocoRootModule } from '../transloco.root.module';
 
 @Component({
   selector: 'app-layout',

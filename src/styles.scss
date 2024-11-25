@@ -1,8 +1,30 @@
-*{
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+a {
+  all: unset;
+}
+
+//$black_900: #000000;
+//$black_500: #121111;
+//$black_100: #272727;
+//
+//$gold_900: #d6ab2b;
+//$gold_500: #fbc928;
+//$gold_100: #fdcd4b;
+//
+//$brown_900: #321c0c;
+//$brown_500: #683a19;
+//$brown_100: #87512a;
+//
+//$white_900: #ffffff;
