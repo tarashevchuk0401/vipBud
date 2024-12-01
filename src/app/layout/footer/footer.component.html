@@ -1,1 +1,22 @@
-<p>footer works!</p>
+<footer>
+  <div class="left footer-container">
+    <img src="assets/icons/logo.png" alt="logo" />
+
+    <div class="phone golden-hover" href="tel:+1234567890">
+      <img src="/assets/icons/icons8-phone-50.png" alt="phone" />
+      <h2>+48 730 555 555</h2>
+    </div>
+  </div>
+
+  <div class="right footer-container">
+    <a routerLink="/" class="routing-button golden-hover">{{
+        "header.aboutUs" | transloco
+      }}</a>
+    <a routerLink="/gallery" class="routing-button golden-hover">{{
+        "header.gallery" | transloco
+      }}</a>
+    <a routerLink="/main" class="routing-button golden-hover">{{
+        "header.contact" | transloco
+      }}</a>
+  </div>
+</footer>

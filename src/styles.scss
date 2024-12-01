@@ -1,9 +1,10 @@
-
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 @import "@ng-select/ng-select/themes/default.theme.css";
 @import "assets/colors.scss";
 
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
 * {
   margin: 0;
@@ -18,27 +19,26 @@ a {
   cursor: pointer;
 }
 
-.routing-button{
-  color: $gold_900
+.routing-button {
+  color: $gold_900;
 }
 
-.golden-hover{
-  transition: all ease .5s;
-  &:hover{
-   color: $gold_hover;
+.golden-hover {
+  transition: all ease 0.5s;
+  &:hover {
+    color: $gold_hover;
     transform: translateY(-3px);
   }
 }
-//$black_900: #000000;
-//$black_500: #121111;
-//$black_100: #272727;
-//
-//$gold_900: #d6ab2b;
-//$gold_500: #fbc928;
-//$gold_100: #fdcd4b;
-//
-//$brown_900: #321c0c;
-//$brown_500: #683a19;
-//$brown_100: #87512a;
-//
-//$white_900: #ffffff;
+
+.p-ripple {
+  background-color: $black_900;
+  margin: 0 5px;
+}
+
+.carousel-prev-icon {
+  color: $gold_900;
+}
+.carousel-next-icon {
+  color: $gold_900;
+}
