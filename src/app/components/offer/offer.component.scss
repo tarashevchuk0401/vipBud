@@ -1,20 +1,58 @@
-.wrapper{
-  max-width: 750px;
-  margin: 0 auto;
+@import "assets/colors.scss";
 
-  .offer{
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 70px 0;
+  color: $white_900;
+
+  background-image: url("/assets/images/sofa.jpg");
+  background-size: cover;
+
+  img {
+    object-fit: contain;
+    width: 25%;
+    //height: 500px;
+
+    @media (max-width: 768px) {
+     display: none;
+    }
+  }
+
+  .wrapper-offer {
     display: flex;
-    align-items: center;
-    margin: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+    width: 50%;
 
-    .title{
-      font-size: 50px;
-      margin: 30px;
+
+    @media (max-width: 768px) {
+      width: 90vw;
     }
 
-    .text{
-      font-size: 22px;
-      text-align: justify;
+    .offer {
+      display: flex;
+      align-items: baseline;
+      margin: 15px;
+      font-weight: 300;
+      font-size: 30px;
+      z-index: 3;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        margin: 7px;
+      }
+
+      .title {
+        margin: 10px;
+        color: $gold_900;
+      }
+
+      .text {
+        text-align: justify;
+      }
     }
   }
 }

@@ -1,0 +1,24 @@
+<div class="offcanvas-header">
+  <h4>Menu</h4>
+  <button (click)="closeSidebar.emit()">
+    <img src="assets/icons/close.svg" />
+  </button>
+</div>
+<div class="offcanvas-body">
+  <div class="routing">
+    <a routerLink="/"  (click)="closeSidebar.emit()" class="routing-button golden-hover">{{
+      "header.aboutUs" | transloco
+    }}</a>
+    <a routerLink="/gallery" (click)="closeSidebar.emit()"  class="routing-button golden-hover">{{
+      "header.gallery" | transloco
+    }}</a>
+    <a routerLink="/main" (click)="closeSidebar.emit()"  class="routing-button golden-hover">{{
+      "header.contact" | transloco    }}</a>
+  </div>
+
+  <div class="language">
+    <button (click)="onLanguageChange('pl')" [ngClass]="{ 'language-selected' : language === 'pl'}">PL</button>
+    <button (click)="onLanguageChange('en')" [ngClass]="{ 'language-selected' : language === 'en'}">EN</button>
+    <button (click)="onLanguageChange('uk')" [ngClass]="{ 'language-selected' : language === 'uk'}">UA</button>
+  </div>
+</div>

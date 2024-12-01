@@ -3,6 +3,14 @@
     "aboutUs": "O nas",
     "contact": "Kontakt",
     "gallery": "Projekty"
-
+  },
+  "mainPhoto": "Remont mieszkań w Warszawie",
+  "mainPhotoDescription": "Profesjonalne wykończenie",
+  "offer": {
+    "1": "Konsultacja z Architektem i wybór pakietu",
+    "2": "Podpisanie umowy",
+    "3": "Wybór materiałów, prace projektowe",
+    "4": "Prace wykończeniowe",
+    "5": "Sprzątanie, odbiór gotowego mieszkania"
   }
 }

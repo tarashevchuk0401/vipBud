@@ -3,5 +3,14 @@
     "aboutUs": "About us",
     "contact": "Contact",
     "gallery": "Projects"
+  },
+  "mainPhoto": "Renovation in Warsaw",
+  "mainPhotoDescription": "Professional repair",
+  "offer": {
+    "1": "Consultation with specialists",
+    "2": "Signing the agreement",
+    "3": "Selection of materials and planning",
+    "4": "Performance of work",
+    "5": "Cleaning, handover of the object"
   }
 }

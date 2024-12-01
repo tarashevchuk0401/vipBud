@@ -2,6 +2,7 @@
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 @import "@ng-select/ng-select/themes/default.theme.css";
+@import "assets/colors.scss";
 
 
 * {
@@ -14,9 +15,20 @@
 
 a {
   all: unset;
+  cursor: pointer;
 }
 
+.routing-button{
+  color: $gold_900
+}
 
+.golden-hover{
+  transition: all ease .5s;
+  &:hover{
+   color: $gold_hover;
+    transform: translateY(-3px);
+  }
+}
 //$black_900: #000000;
 //$black_500: #121111;
 //$black_100: #272727;

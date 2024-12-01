@@ -7,6 +7,7 @@ import {
   NgbOffcanvas,
   OffcanvasDismissReasons,
 } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @Component({
   selector: 'app-layout',
@@ -17,6 +18,7 @@ import {
     HeaderComponent,
     FooterComponent,
     NgbDatepickerModule,
+    SidebarComponent,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',

@@ -16,6 +16,7 @@
       "parser": "@typescript-eslint/parser",
       "plugins": ["@angular-eslint"],
       "rules": {
+        "max-len": ["error", { "code": 120 }] // Set max length for strings
       }
     },
     {

@@ -1,0 +1,55 @@
+@import "assets/colors.scss";
+
+.offcanvas-header {
+  background-color: $black_900;
+  height: 20dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h4 {
+    color: $gold-900;
+    font-size: 25px;
+  }
+  button {
+    border: none;
+    background-color: $black_900;
+    outline: none;
+
+    img {
+      width: 50px;
+    }
+  }
+}
+
+.offcanvas-body {
+  background-color: $black_900;
+  height: 80dvh;
+
+  .routing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 25dvh;
+  }
+
+  .language {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    min-height: 45dvh;
+
+    button {
+      border: none;
+      background-color: $black_900;
+      outline: none;
+      color: $gold_inactive;
+    }
+
+    .language-selected {
+      color: $gold-900;
+      transform: translateY(-3px);
+    }
+  }
+}
