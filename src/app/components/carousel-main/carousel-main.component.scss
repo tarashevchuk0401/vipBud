@@ -1,0 +1,20 @@
+.wrapper{
+  padding: 20px 15px
+}
+
+img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  margin: 0 10px;
+
+  @media (max-width: 768px) {
+    width: 250px;
+  }
+}
+
+.p-carousel-indicators p-reset{
+  outline: 1px solid red;
+}
+
+
