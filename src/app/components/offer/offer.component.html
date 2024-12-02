@@ -1,6 +1,5 @@
 <div class="wrapper">
   <div class="text-container">
-
     <p>
       Які асоціації зі словом “ремонт” виникають у вас? Більшість людей, які
       застали часи ремонтів кінця 20 століття, бояться розпочинати перетворення
@@ -15,16 +14,13 @@
   <div class="offer">
     <img src="assets/images/pexels-houzlook-3356416.jpg" />
 
-    <div class="wrapper-offer">
-      @for (offer of offersArray; track offer.title) {
-        <div class="offer">
-          <div class="title">{{ offer.title }}</div>
-          <div class="text">
-            {{ offer.text | transloco }}
-          </div>
+    <div class="wrapper-offer" >
+      <div class="offer-block" *ngFor="let offer of offersArray">
+        <div class="title">{{ offer.title }}</div>
+        <div class="text">
+          {{ offer.text | transloco }}
         </div>
-      }
+      </div>
     </div>
   </div>
 </div>
-

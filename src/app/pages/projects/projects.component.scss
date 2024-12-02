@@ -4,33 +4,24 @@ main {
     220deg,
     rgba(10, 10, 9, 1) 0%,
     //rgb(32, 13, 7) 30%,
-    rgb(119, 53, 32) 30%,
+    rgb(48, 19, 11) 30%,
     rgb(64, 30, 20) 50%,
-    rgb(106, 46, 17) 80%,
+    rgb(46, 20, 6) 80%,
     rgb(27, 11, 5) 95%
   );
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 80dvh;
 
-  .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80dvw;
-    justify-content: space-around;
-    //flex-grow: 1;
-    outline: 1px solid red;
-
-    .f-card {
-      margin: 80px 15px;
-      img {
-        //width: 1000px;
-        //height: 700px;
-        width: 100%;
-        object-fit: contain;
-      }
+  .f-card {
+    margin: 40px 15px;
+    width: 800px;
+    img {
+      width: 100%;
+      object-fit: contain;
     }
   }
 }

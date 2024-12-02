@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslocoRootModule } from '../../transloco.root.module';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-offer',
   standalone: true,
-  imports: [TranslocoRootModule],
+  imports: [TranslocoRootModule, NgForOf],
   templateUrl: './offer.component.html',
   styleUrl: './offer.component.scss',
 })

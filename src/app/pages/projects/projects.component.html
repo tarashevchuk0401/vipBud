@@ -9,27 +9,30 @@
 <!--</main>-->
 
 <main>
-<!--  @for (images of gallery; track image.) {-->
-    <p-galleria
-      [value]="gallery[0]"
-      [containerStyle]="{ 'max-width': '640px' }"
-      [responsiveOptions]="responsiveOptions"
-      [numVisible]="3"
-    >
-      <ng-template pTemplate="item" let-item>
-        <img [src]="item.itemImageSrc" style="width: 500px; display: block" />
-      </ng-template>
-      <ng-template pTemplate="thumbnail" let-item>
-        <div class="grid grid-nogutter justify-content-center">
-          <img [src]="item.thumbnailImageSrc" style="display: block" />
-        </div>
-      </ng-template>
-      <ng-template pTemplate="caption" let-item>
-        <h4 style="margin-bottom: 0.5rem; color: #ffffff">
-          {{ item.title }}
-        </h4>
-        <p>{{ item.alt }}</p>
-      </ng-template>
-    </p-galleria>
-<!--  }-->
+  <div *ngFor="let images of gallery">
+    <div class="f-card">
+      <p-galleria
+        [value]="images"
+        [containerStyle]="{ 'max-width': '1200px' }"
+        [showItemNavigators]="true"
+        [responsiveOptions]="responsiveOptions"
+        [numVisible]="3"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item.itemImageSrc" style="width: 100%; display: block" />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" style="display: block" />
+          </div>
+        </ng-template>
+        <ng-template pTemplate="caption" let-item>
+          <h4 style="margin-bottom: 0.5rem; color: #ffffff">
+            {{ item.title }}
+          </h4>
+          <p>{{ item.alt }}</p>
+        </ng-template>
+      </p-galleria>
+    </div>
+  </div>
 </main>
