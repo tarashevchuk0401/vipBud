@@ -1,14 +1,30 @@
 <div class="wrapper">
-  <img src="assets/images/pexels-houzlook-3356416.jpg" />
+  <div class="text-container">
 
-  <div class="wrapper-offer">
-    @for (offer of offersArray; track offersArray) {
-      <div class="offer">
-        <div class="title">{{ offer.title }}</div>
-        <div class="text">
-          {{ offer.text | transloco }}
+    <p>
+      Які асоціації зі словом “ремонт” виникають у вас? Більшість людей, які
+      застали часи ремонтів кінця 20 століття, бояться розпочинати перетворення
+      свого житла, адже це дорого, брудно, довго, затратно по нервах і вимагає
+      вкладення величезної кількості інших ресурсів. Але сьогодні ремонт – це
+      зовсім інший процес, який може бути не просто приємним для замовника, а й
+      вкрай вигідним. Ми говоримо про ремонт “під ключ” – комплексне надання
+      послуг командою фахівців “Студії ремонту”.
+    </p>
+  </div>
+
+  <div class="offer">
+    <img src="assets/images/pexels-houzlook-3356416.jpg" />
+
+    <div class="wrapper-offer">
+      @for (offer of offersArray; track offer.title) {
+        <div class="offer">
+          <div class="title">{{ offer.title }}</div>
+          <div class="text">
+            {{ offer.text | transloco }}
+          </div>
         </div>
-      </div>
-    }
+      }
+    </div>
   </div>
 </div>
+

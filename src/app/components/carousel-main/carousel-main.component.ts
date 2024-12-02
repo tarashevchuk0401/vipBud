@@ -3,12 +3,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { ChipsModule } from 'primeng/chips';
 import { SliderModule } from 'primeng/slider';
 import { ButtonModule } from 'primeng/button';
-
-export interface Imeage {
-  src: string;
-  title: string;
-  alt: string;
-}
+import { Image } from '../../shared/type/image';
 
 @Component({
   selector: 'app-carousel-main',
@@ -20,8 +15,7 @@ export interface Imeage {
   providers: [],
 })
 export class CarouselMainComponent implements OnInit {
-  imageUrl: string = 'assets/images/sofa.jpg';
-  images: Imeage[] = [
+  images: Image[] = [
     { src: 'assets/images/sofa.jpg', alt: 'Image 1', title: 'Image 1' },
     { src: 'assets/images/bedroom.jpg', alt: 'Image 2', title: 'Image 2' },
     {
@@ -37,8 +31,6 @@ export class CarouselMainComponent implements OnInit {
       title: 'Image 2',
     },
   ];
-
-  items: Imeage[] = [];
 
   ngOnInit() {}
 }
