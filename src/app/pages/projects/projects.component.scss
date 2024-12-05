@@ -1,27 +1,71 @@
-main {
-  background: rgb(10, 10, 9);
+@import "assets/colors.scss";
+
+.wrapper {
+  //background: rgb(10, 10, 9);
   background: linear-gradient(
-    220deg,
-    rgba(10, 10, 9, 1) 0%,
-    //rgb(32, 13, 7) 30%,
-    rgb(48, 19, 11) 30%,
-    rgb(64, 30, 20) 50%,
-    rgb(46, 20, 6) 80%,
-    rgb(27, 11, 5) 95%
+    78deg,
+    rgb(11, 9, 9) 0%,
+    rgb(37, 33, 33) 30%,
+    rgb(39, 32, 32) 50%,
+    rgb(44, 37, 37) 80%,
+    rgb(23, 19, 19) 95%
   );
+  //background-color: #171313;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 80dvh;
+  main {
+    //background-image: url("/assets/images/sofa.jpg");
+    //background-size: contain;
+    //background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80dvh;
 
-  .f-card {
-    margin: 40px 15px;
-    width: 800px;
-    img {
-      width: 100%;
-      object-fit: contain;
+    @media (max-width: 768px) {
+      background-image: none;
+    }
+    .f-card {
+      margin: 40px 15px;
+      width: 80dvw;
+      max-width: 900px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .small-image {
+        width: 150px;
+        object-fit: contain;
+
+        @media (max-width: 768px) {
+          width: 70px;
+        }
+      }
+
+      .description {
+        padding: 0.5rem;
+
+        @media (max-width: 768px) {
+          padding: 0.2rem;
+          * {
+            margin: 2px;
+          }
+        }
+        h4 {
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+        }
+
+        p {
+          font-size: 1.3rem;
+          @media (max-width: 768px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
     }
   }
 }

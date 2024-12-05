@@ -1,38 +1,37 @@
-<!--<main>-->
-<!--  <div class="wrapper">-->
-<!--    @for (image of images; track images) {-->
-<!--      <div class="f-card">-->
-<!--        <img [src]="image.src" [alt]="image.alt">-->
-<!--      </div>-->
-<!--    }-->
-<!--  </div>-->
-<!--</main>-->
 
-<main>
-  <div *ngFor="let images of gallery">
-    <div class="f-card">
-      <p-galleria
-        [value]="images"
-        [containerStyle]="{ 'max-width': '1200px' }"
-        [showItemNavigators]="true"
-        [responsiveOptions]="responsiveOptions"
-        [numVisible]="3"
-      >
-        <ng-template pTemplate="item" let-item>
-          <img [src]="item.itemImageSrc" style="width: 100%; display: block" />
-        </ng-template>
-        <ng-template pTemplate="thumbnail" let-item>
-          <div class="grid grid-nogutter justify-content-center">
-            <img [src]="item.thumbnailImageSrc" style="display: block" />
-          </div>
-        </ng-template>
-        <ng-template pTemplate="caption" let-item>
-          <h4 style="margin-bottom: 0.5rem; color: #ffffff">
-            {{ item.title }}
-          </h4>
-          <p>{{ item.alt }}</p>
-        </ng-template>
-      </p-galleria>
+<div class="wrapper">
+  <main>
+    <div *ngFor="let images of gallery">
+      <div class="f-card">
+        <p-galleria
+          class="p-galleria"
+          [value]="images.gallery"
+          [showItemNavigators]="true"
+          [responsiveOptions]="responsiveOptions"
+          [numVisible]="3"
+        >
+          <ng-template pTemplate="item" let-item>
+            <img
+              [src]="item.itemImageSrc"
+              alt="image"
+              style="display: block"
+            />
+          </ng-template>
+          <ng-template pTemplate="thumbnail" let-item>
+            <div class="grid grid-nogutter justify-content-center">
+              <img class="small-image" [src]="item.thumbnailImageSrc" style="display: block" alt="small" />
+            </div>
+          </ng-template>
+          <ng-template pTemplate="caption"  let-item>
+            <div class="description">
+              <h4>
+                {{ images.title }}
+              </h4>
+              <p>{{ images.alt }}</p>
+            </div>
+          </ng-template>
+        </p-galleria>
+      </div>
     </div>
-  </div>
-</main>
+  </main>
+</div>

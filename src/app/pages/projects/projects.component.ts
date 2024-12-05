@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
-import { Image } from '../../shared/type/image';
 import { GalleriaModule } from 'primeng/galleria';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 export interface GalleryItem {
   itemImageSrc: string;
   thumbnailImageSrc: string;
-  alt: string;
-  title: string;
 }
+
+export interface Gallery {
+  title: string;
+  alt: string;
+  gallery: GalleryItem[];
+}
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -18,57 +22,91 @@ export interface GalleryItem {
 })
 export class ProjectsComponent {
   responsiveOptions: any[] = [
-    {
-      breakpoint: '1024px',
-      numVisible: 5,
-    },
+    // {
+    //   breakpoint: '1024px',
+    //   numVisible: 4,
+    // },
     {
       breakpoint: '768px',
       numVisible: 3,
     },
     {
       breakpoint: '560px',
-      numVisible: 1,
+      numVisible: 2,
     },
   ];
 
-  galleryItem: GalleryItem[] = [
-    {
-      itemImageSrc: 'assets/images/skarbka/IMG_20241201_130037.jpg',
-      thumbnailImageSrc:
-        'https://primefaces.org/cdn/primeng/images/galleria/galleria1s.jpg',
-      alt: '60m2',
-      title: 'Mieszkanie na Bialolece',
-    },
-    {
-      itemImageSrc: 'assets/images/skarbka/IMG_20241201_130138.jpg',
-      thumbnailImageSrc:
-        'https://primefaces.org/cdn/primeng/images/galleria/galleria2s.jpg',
-      alt: 'Description for Image 2',
-      title: 'Title 2',
-    },
-    {
-      itemImageSrc: 'assets/images/skarbka/IMG_20241201_125444.jpg',
-      thumbnailImageSrc:
-        'https://primefaces.org/cdn/primeng/images/galleria/galleria3s.jpg',
-      alt: 'Description for Image 3',
-      title: 'Title 3',
-    },
-    {
-      itemImageSrc: 'assets/images/skarbka/IMG_20241201_135944.jpg',
-      thumbnailImageSrc:
-        'https://primefaces.org/cdn/primeng/images/galleria/galleria3s.jpg',
-      alt: 'Description for Image 3',
-      title: 'Title 3',
-    },
-    {
-      itemImageSrc: 'assets/images/skarbka/IMG_20241201_140250.jpg',
-      thumbnailImageSrc:
-        'https://primefaces.org/cdn/primeng/images/galleria/galleria3s.jpg',
-      alt: 'Description for Image 3',
-      title: 'Title 3',
-    },
-  ];
+  galleryItem: Gallery = {
+    title: 'Mieszkanie na Bialolece',
+    alt: '60m2',
+    gallery: [
+      {
+        itemImageSrc: 'assets/images/skarbka/middle/sm1.jpg',
+        thumbnailImageSrc: 'assets/images/skarbka/small/ss1.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/skarbka/middle/sm2.jpg',
+        thumbnailImageSrc: 'assets/images/skarbka/small/ss2.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/skarbka/middle/sm3.jpg',
+        thumbnailImageSrc: 'assets/images/skarbka/small/ss3.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/skarbka/middle/sm4.jpg',
+        thumbnailImageSrc: 'assets/images/skarbka/small/ss4.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/skarbka/middle/sm5.jpg',
+        thumbnailImageSrc: 'assets/images/skarbka/small/ss5.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/skarbka/middle/sm6.jpg',
+        thumbnailImageSrc: 'assets/images/skarbka/small/ss6.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/skarbka/middle/sm7.jpg',
+        thumbnailImageSrc: 'assets/images/skarbka/small/ss7.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/skarbka/middle/sm8.jpg',
+        thumbnailImageSrc: 'assets/images/skarbka/small/ss8.jpg',
+      },
+    ],
+  };
 
-  gallery: GalleryItem[][] = [this.galleryItem, this.galleryItem];
+  galleryItem2: Gallery = {
+    title: 'Mieszkanie w Pruszkowie',
+    alt: '250m2',
+    gallery: [
+      {
+        itemImageSrc: 'assets/images/pruszkow/middle/em2.jpg',
+        thumbnailImageSrc: 'assets/images/pruszkow/small/es2.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/pruszkow/middle/em4.jpg',
+        thumbnailImageSrc: 'assets/images/pruszkow/small/es4.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/pruszkow/middle/em3.jpg',
+        thumbnailImageSrc: 'assets/images/pruszkow/small/es3.jpg',
+      },
+
+      {
+        itemImageSrc: 'assets/images/pruszkow/middle/em5.jpg',
+        thumbnailImageSrc: 'assets/images/pruszkow/small/es5.jpg',
+      },
+
+      {
+        itemImageSrc: 'assets/images/pruszkow/middle/em1.jpg',
+        thumbnailImageSrc: 'assets/images/pruszkow/small/es1.jpg',
+      },
+      {
+        itemImageSrc: 'assets/images/pruszkow/middle/em6.jpg',
+        thumbnailImageSrc: 'assets/images/pruszkow/small/es6.jpg',
+      },
+    ],
+  };
+
+  gallery: Gallery[] = [this.galleryItem, this.galleryItem2];
 }
