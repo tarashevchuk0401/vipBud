@@ -1,4 +1,4 @@
-@import "assets/colors.scss";
+@import 'assets/colors.scss';
 
 .wrapper {
   background-color: rgb(23, 19, 19);
@@ -12,7 +12,6 @@
     min-height: 80dvh;
     z-index: 10;
     position: relative;
-
 
     @media (max-width: 768px) {
       background-image: none;
@@ -92,5 +91,4 @@
     box-shadow: 8px 18px 18px 100px rgba(60, 52, 52, 0.2);
     transform: rotate(45deg);
   }
-
 }

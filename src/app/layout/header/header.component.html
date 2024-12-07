@@ -10,36 +10,21 @@
     </div>
 
     <div class="info m-1 d-flex">
-      <a routerLink="/" class="routing-button golden-hover">{{
-        "header.aboutUs" | transloco
-      }}</a>
-      <a routerLink="/projects" class="routing-button golden-hover">{{
-        "header.gallery" | transloco
-      }}</a>
-      <a routerLink="/main" class="routing-button golden-hover">{{
-        "header.contact" | transloco
-      }}</a>
+      <a routerLink="/" class="routing-button golden-hover">{{ 'header.aboutUs' | transloco }}</a>
+      <a routerLink="/projects" class="routing-button golden-hover">{{ 'header.gallery' | transloco }}</a>
+      <a routerLink="/main" class="routing-button golden-hover">{{ 'header.contact' | transloco }}</a>
 
       <div class="phone-desktop">
         <ng-container *ngTemplateOutlet="phone"></ng-container>
       </div>
 
-      <ng-select
-        [ngModel]="(language$ | async) ?? 'en'"
-        [clearable]="false"
-        (change)="onLanguageChange($event)"
-      >
+      <ng-select [ngModel]="(language$ | async) ?? 'en'" [clearable]="false" (change)="onLanguageChange($event)">
         @for (lang of availableLanguage; track lang) {
           <ng-option [value]="lang.value">{{ lang.name }}</ng-option>
         }
       </ng-select>
 
-      <img
-        class="menu"
-        (click)="openSidebar.emit()"
-        src="assets/icons/burger.svg"
-        alt="menu"
-      />
+      <img class="menu" (click)="openSidebar.emit()" src="assets/icons/burger.svg" alt="menu" />
     </div>
   </div>
 </div>

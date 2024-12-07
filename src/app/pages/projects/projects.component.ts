@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
-import { GalleriaModule } from 'primeng/galleria';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CarouselModule } from 'primeng/carousel';
+import { Component } from '@angular/core'
+import { GalleriaModule, GalleriaResponsiveOptions } from 'primeng/galleria'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { CarouselModule } from 'primeng/carousel'
 
 export interface GalleryItem {
-  itemImageSrc: string;
-  thumbnailImageSrc: string;
+  itemImageSrc: string
+  thumbnailImageSrc: string
 }
 
 export interface Gallery {
-  title: string;
-  alt: string;
-  gallery: GalleryItem[];
+  title: string
+  alt: string
+  gallery: GalleryItem[]
 }
 
 @Component({
@@ -22,11 +22,7 @@ export interface Gallery {
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  responsiveOptions: any[] = [
-    // {
-    //   breakpoint: '1024px',
-    //   numVisible: 4,
-    // },
+  responsiveOptions: GalleriaResponsiveOptions[] = [
     {
       breakpoint: '768px',
       numVisible: 3,
@@ -35,7 +31,7 @@ export class ProjectsComponent {
       breakpoint: '560px',
       numVisible: 2,
     },
-  ];
+  ]
 
   galleryItem: Gallery = {
     title: 'Mieszkanie na Bialolece',
@@ -74,7 +70,7 @@ export class ProjectsComponent {
         thumbnailImageSrc: 'assets/images/skarbka/small/ss7.jpg',
       },
     ],
-  };
+  }
 
   galleryItem2: Gallery = {
     title: 'Mieszkanie w Pruszkowie',
@@ -107,7 +103,7 @@ export class ProjectsComponent {
         thumbnailImageSrc: 'assets/images/pruszkow/small/es6.jpg',
       },
     ],
-  };
+  }
 
-  gallery: Gallery[] = [this.galleryItem, this.galleryItem2];
+  gallery: Gallery[] = [this.galleryItem, this.galleryItem2]
 }

@@ -1,11 +1,11 @@
-@import "assets/colors.scss";
+@import 'assets/colors.scss';
 
 .wrapper {
   display: flex;
   flex-direction: column;
   color: $white_900;
 
-  background-image: url("/assets/images/sofa.jpg");
+  background-image: url('/assets/images/sofa.jpg');
   background-size: cover;
 
   .text-container {

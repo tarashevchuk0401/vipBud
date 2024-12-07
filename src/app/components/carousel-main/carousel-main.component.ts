@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
-import { ChipsModule } from 'primeng/chips';
-import { SliderModule } from 'primeng/slider';
-import { ButtonModule } from 'primeng/button';
-import { Image } from '../../shared/type/image';
+import { Component, OnInit } from '@angular/core'
+import { CarouselModule } from 'primeng/carousel'
+import { ChipsModule } from 'primeng/chips'
+import { SliderModule } from 'primeng/slider'
+import { ButtonModule } from 'primeng/button'
+import { Image } from '../../shared/type/image'
 
 @Component({
   selector: 'app-carousel-main',
@@ -30,7 +30,7 @@ export class CarouselMainComponent implements OnInit {
       alt: 'Image 2',
       title: 'Image 2',
     },
-  ];
+  ]
 
   ngOnInit() {}
 }

@@ -6,19 +6,20 @@
 </div>
 <div class="offcanvas-body">
   <div class="routing">
-    <a routerLink="/"  (click)="closeSidebar.emit()" class="routing-button golden-hover">{{
-      "header.aboutUs" | transloco
+    <a routerLink="/" (click)="closeSidebar.emit()" class="routing-button golden-hover">{{
+      'header.aboutUs' | transloco
     }}</a>
-    <a routerLink="/projects" (click)="closeSidebar.emit()"  class="routing-button golden-hover">{{
-      "header.gallery" | transloco
+    <a routerLink="/projects" (click)="closeSidebar.emit()" class="routing-button golden-hover">{{
+      'header.gallery' | transloco
     }}</a>
-    <a routerLink="/main" (click)="closeSidebar.emit()"  class="routing-button golden-hover">{{
-      "header.contact" | transloco    }}</a>
+    <a routerLink="/main" (click)="closeSidebar.emit()" class="routing-button golden-hover">{{
+      'header.contact' | transloco
+    }}</a>
   </div>
 
   <div class="language">
-    <button (click)="onLanguageChange('pl')" [ngClass]="{ 'language-selected' : language === 'pl'}">PL</button>
-    <button (click)="onLanguageChange('en')" [ngClass]="{ 'language-selected' : language === 'en'}">EN</button>
-    <button (click)="onLanguageChange('uk')" [ngClass]="{ 'language-selected' : language === 'uk'}">UA</button>
+    <button (click)="onLanguageChange('pl')" [ngClass]="{ 'language-selected': language === 'pl' }">PL</button>
+    <button (click)="onLanguageChange('en')" [ngClass]="{ 'language-selected': language === 'en' }">EN</button>
+    <button (click)="onLanguageChange('uk')" [ngClass]="{ 'language-selected': language === 'uk' }">UA</button>
   </div>
 </div>

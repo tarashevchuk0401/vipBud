@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { TranslocoRootModule } from '../../transloco.root.module';
-import { NgForOf } from '@angular/common';
+import { Component } from '@angular/core'
+import { TranslocoRootModule } from '../../transloco.root.module'
+import { NgForOf } from '@angular/common'
 
 @Component({
   selector: 'app-offer',
@@ -32,5 +32,5 @@ export class OfferComponent {
       title: '4',
       text: 'offer.5',
     },
-  ];
+  ]
 }

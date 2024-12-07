@@ -1,7 +1,7 @@
-import { Routes } from '@angular/router';
-import { LayoutComponent } from './layout/layout.component';
-import { MainComponent } from './pages/main/main.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
+import { Routes } from '@angular/router'
+import { LayoutComponent } from './layout/layout.component'
+import { MainComponent } from './pages/main/main.component'
+import { ProjectsComponent } from './pages/projects/projects.component'
 
 export const routes: Routes = [
   {
@@ -14,4 +14,4 @@ export const routes: Routes = [
       // { path: '', redirectTo: 'main' },
     ],
   },
-];
+]
