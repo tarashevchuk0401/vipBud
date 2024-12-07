@@ -56,3 +56,10 @@ a {
 .carousel-next-icon {
   color: $gold_900;
 }
+
+.circle-highlight{
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(61, 53, 53, 0.2);
+  box-shadow: 8px 18px 18px 100px rgba(60, 52, 52, 0.2);
+}

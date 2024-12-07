@@ -64,14 +64,11 @@
   .blur-circle {
     height: 650px;
     width: 350px;
-    z-index: 1;
-    position: absolute;
     top: 200px;
     left: 250px;
-    border-radius: 50%;
-    background-color: rgba(61, 53, 53, 0.2);
-    box-shadow: 8px 18px 18px 100px rgba(60, 52, 52, 0.2);
     transform: rotate(-30deg);
+
+
 
     @media (max-width: 1024px) {
       height: 150px;
@@ -82,13 +79,8 @@
   .blur-circle-bottom {
     height: 600px;
     width: 450px;
-    z-index: 0;
-    position: absolute;
     top: 900px;
     right: 150px;
-    border-radius: 50%;
-    background-color: rgba(61, 53, 53, 0.2);
-    box-shadow: 8px 18px 18px 100px rgba(60, 52, 52, 0.2);
     transform: rotate(45deg);
   }
 }

@@ -1,0 +1,36 @@
+@import 'assets/colors.scss';
+
+.wrapper {
+  background-color: rgb(23, 19, 19);
+  position: relative;
+  min-height: 80dvh;
+
+  main{
+    .input-underline{
+      background-color: rgb(23, 19, 19, 0);
+      outline: none;
+      border: none;
+    }
+  }
+
+  .blur-circle {
+    height: 150px;
+    width: 100px;
+    top: 100px;
+    right: 150px;
+    transform: rotate(30deg);
+
+    @media (max-width: 1024px) {
+      height: 100px;
+      width: 70px;
+    }
+  }
+
+  .blur-circle-bottom {
+    height: 200px;
+    width: 150px;
+    top: 300px;
+    left: 180px;
+    transform: rotate(-45deg);
+  }
+}
