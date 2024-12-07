@@ -7,6 +7,8 @@
           class="p-galleria"
           [value]="images.gallery"
           [showItemNavigators]="true"
+          [circular]="false"
+          [showIndicators]="false"
           [responsiveOptions]="responsiveOptions"
           [numVisible]="3"
         >
@@ -34,4 +36,6 @@
       </div>
     </div>
   </main>
+  <div class="blur-circle"></div>
+  <div class="blur-circle-bottom"></div>
 </div>
