@@ -5,11 +5,69 @@
   position: relative;
   min-height: 80dvh;
 
-  main{
-    .input-underline{
-      background-color: rgb(23, 19, 19, 0);
-      outline: none;
-      border: none;
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      margin-top: 25px;
+
+      .inputs {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-grow: 1;
+
+        .left-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          flex-grow: 1;
+          margin: 0 20px;
+
+          .input-box-small {
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+          }
+        }
+
+        .right-box {
+          height: auto;
+          flex-grow: 1;
+          margin: 0 20px;
+
+          .input-box-big {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            height: auto;
+            width: 600px;
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+        width: 100%;
+        padding: 30px 20px;
+
+        .button-main {
+          background-color: $black_900;
+          color: $white_900;
+          padding: 5px 25px;
+          border: $white_900;
+
+          &:hover,
+          &:focus {
+            outline: 1px solid $gold_hover;
+          }
+        }
+      }
     }
   }
 
@@ -32,5 +90,53 @@
     top: 300px;
     left: 180px;
     transform: rotate(-45deg);
+  }
+
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    transition: all ease 0.3s;
+
+    &:focus-within .input-label {
+      color: $gold_hover;
+    }
+
+    &:focus-within .input-underline {
+      border-color: $gold_hover;
+    }
+
+    &:hover {
+      .input-label {
+        color: $gold_hover;
+      }
+
+      .input-underline {
+        border-bottom: 1px solid $gold_hover;
+      }
+    }
+
+    .input-label {
+      color: $white_900;
+      font-size: 15px;
+      padding-left: 10px;
+      transition: all ease 0.5s;
+    }
+
+    .input-underline {
+      background-color: rgb(23, 19, 19, 0);
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $white_900;
+      box-shadow: none;
+      color: $white_900;
+      padding: 10px;
+      font-size: 18px;
+      transition: all ease 0.5s;
+
+      &-big {
+        font-size: 16px;
+      }
+    }
   }
 }

@@ -1,7 +1,36 @@
 <div class="wrapper">
   <main>
+    <form [formGroup]="mailForm" (ngSubmit)="onSubmit(mailForm)">
+      <div class="inputs">
+        <div class="left-box">
+          <div class="input-box input-box-small">
+            <label class="input-label">Full Name</label>
+            <input formControlName="fullName" type="text" class="input-underline" />
+          </div>
 
-    <input type="text" class="input-underline">
+          <div class="input-box input-box-small">
+            <label class="input-label">E-mail</label>
+            <input formControlName="email" type="text" class="input-underline" />
+          </div>
+
+          <div class="input-box input-box-small">
+            <label class="input-label">Phone</label>
+            <input formControlName="phone" type="text" class="input-underline" />
+          </div>
+        </div>
+
+        <div class="right-box">
+          <div class="input-box ">
+            <label class="input-label ">Mes</label>
+            <textarea formControlName="body" class="input-underline input-underline-big transition" rows="12"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="button-main transition">Send</button>
+      </div>
+    </form>
 
     <div class="blur-circle circle-highlight"></div>
     <div class="blur-circle-bottom circle-highlight"></div>
