@@ -4,18 +4,18 @@
       <div routerLink="/" class="logo">
         <img src="./assets/icons/logo.png" alt="logo" />
       </div>
-      <div class="phone-mobile">
-        <ng-container *ngTemplateOutlet="phone"></ng-container>
-      </div>
     </div>
 
-    <div class="info m-1 d-flex">
+    <div class="info d-flex">
       <a routerLink="/" class="routing-button golden-hover">{{ 'header.aboutUs' | transloco }}</a>
       <a routerLink="/projects" class="routing-button golden-hover">{{ 'header.gallery' | transloco }}</a>
       <a routerLink="/contact" class="routing-button golden-hover">{{ 'header.contact' | transloco }}</a>
 
       <div class="phone-desktop">
-        <ng-container *ngTemplateOutlet="phone"></ng-container>
+        <div class="phone golden-hover" >
+          <img src="/assets/icons/icons8-phone-50.png" alt="phone" />
+          <h2>+48 730 555 555</h2>
+        </div>
       </div>
 
       <ng-select [ngModel]="(language$ | async) ?? 'en'" [clearable]="false" (change)="onLanguageChange($event)">
@@ -28,9 +28,3 @@
     </div>
   </div>
 </div>
-<ng-template #phone>
-  <div class="phone golden-hover" href="tel:+1234567890">
-    <img src="/assets/icons/icons8-phone-50.png" alt="phone" />
-    <h2>+48 730 555 555</h2>
-  </div>
-</ng-template>

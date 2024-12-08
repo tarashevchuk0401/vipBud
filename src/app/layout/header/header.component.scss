@@ -4,6 +4,9 @@
   ng-select ::ng-deep {
     width: 75px;
     z-index: 3;
+    @media (max-width: 768px) {
+      width: 65px;
+    }
 
     .ng-arrow-wrapper .ng-arrow {
       display: none;
@@ -19,10 +22,13 @@
       color: $gold_inactive;
       outline: 3px solid $black_900;
       transition: all ease 0.3s;
+      @media (max-width: 768px) {
+        font-size:14px;
+      }
+
 
       &:hover {
         background-color: $black_500;
-        //color: $gold_900;
         color: $gold_hover;
         transform: translateY(-3px);
       }
@@ -31,6 +37,9 @@
     .ng-option.ng-option-selected {
       color: $gold_900 !important;
       font-weight: 600;
+      @media (max-width: 768px) {
+        font-size:14px;
+      }
     }
 
     .ng-select-container {
@@ -42,6 +51,12 @@
       background-color: $black_900;
       transition: all ease 0.3s;
       cursor: pointer;
+      user-select: none;
+      font-size:16px;
+
+      @media (max-width: 768px) {
+        font-size:14px;
+      }
 
       &:hover {
         color: $gold_hover;
@@ -81,7 +96,7 @@
       margin-left: 50px;
       cursor: pointer;
       @media (max-width: 1024px) {
-        width: 100px;
+        width: 85px;
         margin-left: 0;
       }
     }
@@ -124,6 +139,7 @@
       font-weight: 400;
       @media (max-width: 768px) {
         font-size: 14px;
+        margin-right:8px;
       }
     }
     img {
@@ -131,17 +147,6 @@
       @media (max-width: 768px) {
         width: 20px;
       }
-    }
-  }
-  .phone-desktop {
-    @media (max-width: 400px) {
-      display: none;
-    }
-  }
-  .phone-mobile {
-    margin-left: 5px;
-    @media (min-width: 400px) {
-      display: none;
     }
   }
 }
