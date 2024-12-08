@@ -11,7 +11,7 @@
     align-items: center;
 
     form {
-      margin-top: 25px;
+      width: 80dvw;
 
       .inputs {
         display: flex;
@@ -19,32 +19,49 @@
         justify-content: center;
         flex-grow: 1;
 
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
         .left-box {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           align-items: flex-end;
           flex-grow: 1;
-          margin: 0 20px;
+          padding: 20px;
+          width: 70%;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
 
           .input-box-small {
             display: flex;
             flex-direction: column;
             width: 280px;
+
+            @media (max-width: 768px) {
+              width: 100%;
+            }
           }
         }
 
         .right-box {
           height: auto;
           flex-grow: 1;
-          margin: 0 20px;
+          padding: 20px;
+          width: 100%;
 
           .input-box-big {
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
+            flex-grow: 3;
             height: auto;
-            width: 600px;
+            //width: 600px;
+            @media (max-width: 1024px) {
+              width: 100%;
+            }
           }
         }
       }
@@ -90,12 +107,16 @@
     top: 300px;
     left: 180px;
     transform: rotate(-45deg);
+
+    @media (max-width: 1024px) {
+      height: 60px;
+      width: 40px;
+    }
   }
 
   .input-box {
     display: flex;
     flex-direction: column;
-    width: 600px;
     transition: all ease 0.3s;
 
     &:focus-within .input-label {
