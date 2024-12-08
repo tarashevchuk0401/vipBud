@@ -12,5 +12,13 @@
     "3": "Selection of materials and planning",
     "4": "Performance of work",
     "5": "Cleaning, handover of the object"
+  },
+  "errors": {
+    "fullNameRequired": "Please enter your name",
+    "phoneRequired": "Please enter your phone",
+    "emailRequired": "Please write your email",
+    "messageRequired": "Please write a message",
+    "emailBad": "Email is not correct",
+    "phoneBad": "Invalid phone number format"
   }
 }

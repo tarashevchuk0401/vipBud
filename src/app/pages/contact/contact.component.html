@@ -4,25 +4,105 @@
       <div class="inputs">
         <div class="left-box">
           <div class="input-box input-box-small">
-            <label class="input-label">Full Name</label>
-            <input formControlName="fullName" type="text" class="input-underline" />
+            <label
+              class="input-label"
+              [ngClass]="{
+                'input-label-error': mailForm.get('fullName')?.touched && mailForm.get('fullName')?.invalid,
+              }"
+              >Full Name</label
+            >
+            <input
+              formControlName="fullName"
+              type="text"
+              class="input-underline"
+              [ngClass]="{
+                'input-underline-error': mailForm.get('fullName')?.touched && mailForm.get('fullName')?.invalid,
+              }" />
+            <div class="input-error">
+              @if (mailForm.get('fullName')?.touched) {
+                @if (mailForm.get('fullName')?.errors?.['required']) {
+                  <span>{{ 'errors.fullNameRequired' | transloco }}</span>
+                }
+              }
+            </div>
           </div>
 
           <div class="input-box input-box-small">
-            <label class="input-label">E-mail</label>
-            <input formControlName="email" type="text" class="input-underline" />
+            <label
+              class="input-label"
+              [ngClass]="{
+                'input-label-error': mailForm.get('email')?.touched && mailForm.get('email')?.invalid,
+              }"
+              >E-mail</label
+            >
+            <input
+              formControlName="email"
+              type="text"
+              class="input-underline"
+              [ngClass]="{
+                'input-underline-error': mailForm.get('email')?.touched && mailForm.get('email')?.invalid,
+              }" />
+            <div class="input-error">
+              @if (mailForm.get('email')?.touched) {
+                @if (mailForm.get('email')?.errors?.['required']) {
+                  <span>{{ 'errors.emailRequired' | transloco }}</span>
+                }
+                @if (mailForm.get('email')?.errors?.['email']) {
+                  <span>{{ 'errors.emailBad' | transloco }}</span>
+                }
+              }
+            </div>
           </div>
 
           <div class="input-box input-box-small">
-            <label class="input-label">Phone</label>
-            <input formControlName="phone" type="text" class="input-underline" />
+            <label
+              class="input-label"
+              email
+              [ngClass]="{
+                'input-label-error': mailForm.get('phone')?.touched && mailForm.get('phone')?.invalid,
+              }"
+              >Phone</label
+            >
+            <input
+              formControlName="phone"
+              type="text"
+              class="input-underline"
+              [ngClass]="{
+                'input-underline-error': mailForm.get('phone')?.touched && mailForm.get('phone')?.invalid,
+              }" />
+            <div class="input-error">
+              @if (mailForm.get('phone')?.touched) {
+                @if (mailForm.get('phone')?.errors?.['phone']) {
+                  <span>{{ 'errors.phoneBad' | transloco }}</span>
+                }
+              }
+            </div>
           </div>
         </div>
 
         <div class="right-box">
           <div class="input-box input-box-big">
-            <label class="input-label ">Mes</label>
-            <textarea formControlName="body" class="input-underline input-underline-big transition" rows="12"></textarea>
+            <label
+              class="input-label"
+              [ngClass]="{
+                'input-label-error': mailForm.get('body')?.touched && mailForm.get('body')?.invalid,
+              }"
+              >Mes</label
+            >
+            <textarea
+              formControlName="body"
+              class="input-underline input-underline-big transition"
+              rows="12"
+              [ngClass]="{
+                'input-underline-error': mailForm.get('body')?.touched && mailForm.get('body')?.invalid,
+              }"></textarea>
+            <div class="input-error">
+              @if (mailForm.get('body')?.touched) {
+                @if (mailForm.get('body')?.errors?.['required']) {
+                  <span>{{ 'errors.messageRequired' | transloco }}</span>
+                }
+              }
+            </div>
           </div>
         </div>
       </div>

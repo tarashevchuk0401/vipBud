@@ -12,5 +12,13 @@
     "3": "Wybór materiałów, prace projektowe",
     "4": "Prace wykończeniowe",
     "5": "Sprzątanie, odbiór gotowego mieszkania"
+  },
+  "errors": {
+    "fullNameRequired": "Proszę wpisać swoje imię",
+    "phoneRequired": "Proszę wpisać swój numer telefonu",
+    "emailRequired": "Proszę wpisać swój adres e-mail",
+    "messageRequired": "Proszę wpisać wiadomość",
+    "emailBad": "Nieprawidłowy adres e-mail",
+    "phoneBad": "Nieprawidłowy format numeru telefonu"
   }
 }

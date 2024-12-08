@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
+import { TranslocoRootModule } from '../../transloco.root.module'
+import { NgClass } from '@angular/common'
+import { PhoneNumberValidator } from '../../shared/validators/phone-number.validator'
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TranslocoRootModule, NgClass],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -15,19 +18,24 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.initializeForm()
+    console.log('Form Data:', this.mailForm)
   }
 
   initializeForm() {
     this.mailForm = this.fb.group({
       fullName: ['', Validators.required],
-      email: ['', Validators.required],
-      phone: [''],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [PhoneNumberValidator('PL')]],
       body: ['', Validators.required],
     })
   }
 
   onSubmit(form: FormGroup) {
-    console.log('Form Data:', form.value)
-    this.mailForm.reset()
+    if (form.invalid) {
+      this.mailForm.markAllAsTouched()
+      console.log('Form Data:', this.mailForm)
+    }
+
+    // this.mailForm.reset()
   }
 }
