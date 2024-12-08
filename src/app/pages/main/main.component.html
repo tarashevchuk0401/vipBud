@@ -8,6 +8,8 @@
   </div>
 </div>
 <main>
-  <app-offer></app-offer>
-  <app-carousel-main></app-carousel-main>
+  @defer (on idle){
+    <app-offer></app-offer>
+    <app-carousel-main></app-carousel-main>
+  }
 </main>

@@ -23,6 +23,11 @@ a {
   color: $gold_900;
 }
 
+.offcanvas {
+  width: 75% !important;
+  max-width: 400px!important;
+}
+
 .golden-hover {
   transition: all ease 0.5s;
   &:hover {
@@ -62,8 +67,12 @@ a {
   border-radius: 50%;
   background-color: rgba(61, 53, 53, 0.2);
   box-shadow: 8px 18px 18px 100px rgba(60, 52, 52, 0.2);
+
+  @media (max-width: 400px) {
+    display:none
+  }
 }
 
-.transition{
+.transition {
   transition: all ease 0.5s;
 }

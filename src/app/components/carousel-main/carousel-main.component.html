@@ -1,7 +1,15 @@
 <div class="wrapper">
-  <p-carousel class="no-paginator" [value]="images" [numVisible]="3" [circular]="false" [showIndicators]="false">
+  <p-carousel
+    class="no-paginator"
+    [value]="images"
+    [numVisible]="2"
+    [responsiveOptions]="responsiveOptions"
+    [circular]="false"
+    [showIndicators]="false">
     <ng-template pTemplate="item" let-image>
-      <img [src]="image.src" width="250" [alt]="image.alt" />
+      <div class="image-container">
+        <img [src]="image.src" width="300" [alt]="image.alt" />
+      </div>
     </ng-template>
   </p-carousel>
 </div>

@@ -1,15 +1,25 @@
 .wrapper {
   padding: 20px 15px;
+  @media (max-width: 768px) {
+    padding: 5px 2px;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Height of the carousel items */
 }
 
 img {
-  width: 400px;
   height: 250px;
   object-fit: cover;
   margin: 0 10px;
 
   @media (max-width: 768px) {
-    width: 250px;
+    height: 180px;
+    width: 220px;
   }
 }
 

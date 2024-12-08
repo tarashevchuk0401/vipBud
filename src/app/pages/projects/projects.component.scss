@@ -17,8 +17,8 @@
       background-image: none;
     }
     .f-card {
-      margin: 40px 15px;
-      width: 80dvw;
+      margin: 40px 15px 0px 15px;
+      width: 90dvw;
       max-width: 900px;
 
       img {
@@ -68,8 +68,6 @@
     left: 250px;
     transform: rotate(-30deg);
 
-
-
     @media (max-width: 1024px) {
       height: 150px;
       width: 100px;
@@ -82,5 +80,10 @@
     top: 900px;
     right: 150px;
     transform: rotate(45deg);
+    @media (max-width: 1024px) {
+      height: 100px;
+      width: 70px;
+      top:400px
+    }
   }
 }
