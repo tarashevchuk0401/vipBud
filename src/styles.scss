@@ -76,3 +76,19 @@ a {
 .transition {
   transition: all ease 0.5s;
 }
+
+// buttons
+
+.button-main {
+  background-color: $black_900;
+  color: $white_900;
+  padding: 5px 25px;
+  border: $white_900;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $gold_hover;
+    transform: translateY(-3px);
+  }
+}
+

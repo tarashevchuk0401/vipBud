@@ -13,6 +13,8 @@
     "4": "Performance of work",
     "5": "Cleaning, handover of the object"
   },
+  "seeProjects": "Check our projects",
+  "aboutUs": "We specialize in the renovation of apartments, houses, and commercial spaces. We have successfully completed many projects, ranging from cosmetic updates to comprehensive reconstructions. Our team of professionals ensures that every project is completed on time, using modern materials and technologies.\n\nWe believe that renovation is not just a technical process but also the creation of a space where it is comfortable to live and work. That is why the main priority of \"VIPBUD\" is customer satisfaction and quality that meets the highest standards.",
   "errors": {
     "fullNameRequired": "Please enter your name",
     "phoneRequired": "Please enter your phone",
@@ -20,5 +22,16 @@
     "messageRequired": "Please write a message",
     "emailBad": "Email is not correct",
     "phoneBad": "Invalid phone number format"
+  },
+  "contact": {
+    "email": "E-mail",
+    "phone": "Phone",
+    "message": "Message",
+    "name": "Name",
+    "send": "Send"
+  },
+  "projects": {
+    "bialoleka": "Apartment in Białołęka",
+    "pruszkow": "Villa near Warsaw"
   }
 }

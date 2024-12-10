@@ -26,3 +26,16 @@ img {
 .p-carousel-indicators p-reset {
   outline: 1px solid red;
 }
+
+.projects{
+  display: flex;
+  justify-content: center;
+
+  .button-main{
+    margin: 35px 0 20px 0;
+    font-size:30px;
+    @media (max-width: 768px) {
+      font-size:18px;
+    }
+  }
+}

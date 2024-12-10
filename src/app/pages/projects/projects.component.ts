@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { GalleriaModule, GalleriaResponsiveOptions } from 'primeng/galleria'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { CarouselModule } from 'primeng/carousel'
+import { TranslocoPipe } from '@ngneat/transloco'
 
 export interface GalleryItem {
   itemImageSrc: string
@@ -17,7 +18,7 @@ export interface Gallery {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [GalleriaModule, ReactiveFormsModule, FormsModule, CarouselModule],
+  imports: [GalleriaModule, ReactiveFormsModule, FormsModule, CarouselModule, TranslocoPipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
@@ -34,8 +35,8 @@ export class ProjectsComponent {
   ]
 
   galleryItem: Gallery = {
-    title: 'Mieszkanie na Bialolece',
-    alt: '60m2',
+    title: 'projects.bialoleka',
+    alt: '60 m2',
     gallery: [
       {
         itemImageSrc: 'assets/images/skarbka/middle/sm8.jpg',
@@ -73,8 +74,8 @@ export class ProjectsComponent {
   }
 
   galleryItem2: Gallery = {
-    title: 'Mieszkanie w Pruszkowie',
-    alt: '250m2',
+    title: 'projects.pruszkow',
+    alt: '250 m2',
     gallery: [
       {
         itemImageSrc: 'assets/images/pruszkow/middle/em2.jpg',

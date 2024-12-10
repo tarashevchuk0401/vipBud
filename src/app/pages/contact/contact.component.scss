@@ -72,18 +72,6 @@
         flex-grow: 1;
         width: 100%;
         padding: 30px 20px;
-
-        .button-main {
-          background-color: $black_900;
-          color: $white_900;
-          padding: 5px 25px;
-          border: $white_900;
-
-          &:hover,
-          &:focus {
-            outline: 1px solid $gold_hover;
-          }
-        }
       }
     }
   }

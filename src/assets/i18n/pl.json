@@ -13,6 +13,8 @@
     "4": "Prace wykończeniowe",
     "5": "Sprzątanie, odbiór gotowego mieszkania"
   },
+  "seeProjects": "Zrealizowane projekty",
+  "aboutUs": "Specjalizujemy się w remontach mieszkań, domów oraz przestrzeni komercyjnych. Z powodzeniem zrealizowaliśmy wiele projektów – od kosmetycznych odświeżeń po kompleksowe przebudowy. Nasz zespół profesjonalistów dba o to, aby każdy projekt był ukończony na czas, z wykorzystaniem nowoczesnych materiałów i technologii.\n\nWierzymy, że remont to nie tylko proces techniczny, ale również tworzenie przestrzeni, w której będzie wygodnie mieszkać i pracować. Dlatego głównym priorytetem „VIPBUD” jest zadowolenie klientów oraz jakość spełniająca najwyższe standardy.",
   "errors": {
     "fullNameRequired": "Proszę wpisać swoje imię",
     "phoneRequired": "Proszę wpisać swój numer telefonu",
@@ -20,5 +22,16 @@
     "messageRequired": "Proszę wpisać wiadomość",
     "emailBad": "Nieprawidłowy adres e-mail",
     "phoneBad": "Nieprawidłowy format numeru telefonu"
+  },
+  "contact": {
+    "email": "E-mail",
+    "phone": "Telefon",
+    "message": "Wiadomość",
+    "name": "Imię",
+    "send": "Wyślij"
+  },
+  "projects": {
+    "bialoleka": "Mieszkanie na Białołęcę",
+    "pruszkow": "Willa pod Warszawą"
   }
 }

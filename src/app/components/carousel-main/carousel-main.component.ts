@@ -4,7 +4,9 @@ import { ChipsModule } from 'primeng/chips'
 import { SliderModule } from 'primeng/slider'
 import { ButtonModule } from 'primeng/button'
 import { Image } from '../../shared/type/image'
-import { GalleriaModule, GalleriaResponsiveOptions } from 'primeng/galleria'
+import { GalleriaModule } from 'primeng/galleria'
+import { RouterLink } from '@angular/router'
+import { TranslocoPipe } from '@ngneat/transloco'
 
 @Component({
   selector: 'app-carousel-main',
@@ -12,7 +14,7 @@ import { GalleriaModule, GalleriaResponsiveOptions } from 'primeng/galleria'
   styleUrl: './carousel-main.component.scss',
 
   standalone: true,
-  imports: [CarouselModule, ButtonModule, ChipsModule, SliderModule, GalleriaModule],
+  imports: [CarouselModule, ButtonModule, ChipsModule, SliderModule, GalleriaModule, RouterLink, TranslocoPipe],
   providers: [],
 })
 export class CarouselMainComponent implements OnInit {

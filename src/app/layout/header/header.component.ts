@@ -18,9 +18,9 @@ export class HeaderComponent implements OnInit {
   @Output() openSidebar = new EventEmitter<void>()
 
   availableLanguage: { name: string; value: string }[] = [
-    { name: 'UKR', value: 'uk' },
     { name: 'PL', value: 'pl' },
     { name: 'EN', value: 'en' },
+    { name: 'UKR', value: 'uk' },
   ]
 
   language$: Observable<string>

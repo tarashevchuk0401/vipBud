@@ -7,19 +7,19 @@
             <label
               class="input-label"
               [ngClass]="{
-                'input-label-error': mailForm.get('fullName')?.touched && mailForm.get('fullName')?.invalid,
+                'input-label-error': mailForm.get('fullName')?.dirty && mailForm.get('fullName')?.invalid,
               }"
-              >Full Name</label
+              >{{ 'contact.name' | transloco }}</label
             >
             <input
               formControlName="fullName"
               type="text"
               class="input-underline"
               [ngClass]="{
-                'input-underline-error': mailForm.get('fullName')?.touched && mailForm.get('fullName')?.invalid,
+                'input-underline-error': mailForm.get('fullName')?.dirty && mailForm.get('fullName')?.invalid,
               }" />
             <div class="input-error">
-              @if (mailForm.get('fullName')?.touched) {
+              @if (mailForm.get('fullName')?.dirty) {
                 @if (mailForm.get('fullName')?.errors?.['required']) {
                   <span>{{ 'errors.fullNameRequired' | transloco }}</span>
                 }
@@ -31,19 +31,19 @@
             <label
               class="input-label"
               [ngClass]="{
-                'input-label-error': mailForm.get('email')?.touched && mailForm.get('email')?.invalid,
+                'input-label-error': mailForm.get('email')?.dirty && mailForm.get('email')?.invalid,
               }"
-              >E-mail</label
+              >{{ 'contact.email' | transloco }}</label
             >
             <input
               formControlName="email"
               type="text"
               class="input-underline"
               [ngClass]="{
-                'input-underline-error': mailForm.get('email')?.touched && mailForm.get('email')?.invalid,
+                'input-underline-error': mailForm.get('email')?.dirty && mailForm.get('email')?.invalid,
               }" />
             <div class="input-error">
-              @if (mailForm.get('email')?.touched) {
+              @if (mailForm.get('email')?.dirty) {
                 @if (mailForm.get('email')?.errors?.['required']) {
                   <span>{{ 'errors.emailRequired' | transloco }}</span>
                 }
@@ -59,22 +59,20 @@
               class="input-label"
               email
               [ngClass]="{
-                'input-label-error': mailForm.get('phone')?.touched && mailForm.get('phone')?.invalid,
+                'input-label-error': mailForm.get('phone')?.dirty && mailForm.get('phone')?.invalid,
               }"
-              >Phone</label
+              >{{ 'contact.phone' | transloco }}</label
             >
             <input
               formControlName="phone"
               type="text"
               class="input-underline"
               [ngClass]="{
-                'input-underline-error': mailForm.get('phone')?.touched && mailForm.get('phone')?.invalid,
+                'input-underline-error': mailForm.get('phone')?.dirty && mailForm.get('phone')?.invalid,
               }" />
             <div class="input-error">
-              @if (mailForm.get('phone')?.touched) {
-                @if (mailForm.get('phone')?.errors?.['phone']) {
-                  <span>{{ 'errors.phoneBad' | transloco }}</span>
-                }
+              @if (mailForm.get('phone')?.dirty && mailForm.get('phone')?.errors?.['phone']) {
+                <span>{{ 'errors.phoneBad' | transloco }}</span>
               }
             </div>
           </div>
@@ -85,19 +83,19 @@
             <label
               class="input-label"
               [ngClass]="{
-                'input-label-error': mailForm.get('body')?.touched && mailForm.get('body')?.invalid,
+                'input-label-error': mailForm.get('body')?.dirty && mailForm.get('body')?.invalid,
               }"
-              >Mes</label
+              >{{ 'contact.message' | transloco }}</label
             >
             <textarea
               formControlName="body"
               class="input-underline input-underline-big transition"
               rows="12"
               [ngClass]="{
-                'input-underline-error': mailForm.get('body')?.touched && mailForm.get('body')?.invalid,
+                'input-underline-error': mailForm.get('body')?.dirty && mailForm.get('body')?.invalid,
               }"></textarea>
             <div class="input-error">
-              @if (mailForm.get('body')?.touched) {
+              @if (mailForm.get('body')?.dirty) {
                 @if (mailForm.get('body')?.errors?.['required']) {
                   <span>{{ 'errors.messageRequired' | transloco }}</span>
                 }
@@ -108,7 +106,7 @@
       </div>
 
       <div class="buttons">
-        <button class="button-main transition">Send</button>
+        <button class="button-main transition">{{ 'contact.send' | transloco }}</button>
       </div>
     </form>
 
